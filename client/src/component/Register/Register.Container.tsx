@@ -6,12 +6,12 @@ import React, {
 } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { registerUser } from "../../_action/user_action";
+// import { registerUser } from "../../_action/user_action";
 import RegisterPageUI from "./Register.Presenter";
 
 export default function RegisterPage() {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
+  // const navigate = useNavigate();
+  // const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -78,13 +78,6 @@ export default function RegisterPage() {
     ];
     if (!isTrue.every((el) => el)) return;
     // @ts-ignore
-    dispatch(registerUser(body)).then((res) => {
-      if (res.payload) {
-        navigate("/login");
-      } else {
-        alert("err");
-      }
-    });
   };
 
   return (

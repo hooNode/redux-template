@@ -1,7 +1,7 @@
 import React, { ComponentType, useEffect, useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { auth } from "../_action/user_action";
+// import { auth } from "../_action/user_action";
 import { useNavigate } from "react-router-dom";
 
 export const withAuth =
@@ -13,20 +13,20 @@ export const withAuth =
 
     useEffect(() => {
       // @ts-ignore
-      dispatch(auth()).then((res) => {
-        console.log(res);
-        if (!res.payload.isAuth) {
-          if (option) {
-            alert("로그인을 헤주세요.");
-            navigate("/login");
-          }
-        } else {
-          if (option === false) {
-            alert("이미 로그인 하셨습니다.");
-            navigate(-1);
-          }
-        }
-      });
+      // dispatch(auth()).then((res) => {
+      //   console.log(res);
+      //   if (!res.payload.isAuth) {
+      //     if (option) {
+      //       alert("로그인을 헤주세요.");
+      //       navigate("/login");
+      //     }
+      //   } else {
+      //     if (option === false) {
+      //       alert("이미 로그인 하셨습니다.");
+      //       navigate(-1);
+      //     }
+      //   }
+      // });
     }, []);
 
     return <Component {...props} />;

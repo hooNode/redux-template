@@ -7,12 +7,12 @@ import React, {
 } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { loginUser } from "../../_action/user_action";
+// import { loginUser } from "../../_action/user_action";
 import LoginPageUI from "./Login.Presenter";
 
 export default function LoginPage() {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -28,19 +28,6 @@ export default function LoginPage() {
     e: FormEvent<HTMLFormElement>
   ) => {
     e.preventDefault();
-
-    const body = {
-      email,
-      password,
-    };
-    // @ts-ignore
-    dispatch(loginUser(body)).then((res) => {
-      if (res.payload) {
-        navigate("/");
-      } else {
-        alert("err");
-      }
-    });
   };
 
   const onClickSignUpButton = () => {
