@@ -9,6 +9,8 @@ const LoadingNavBar = styled.div`
   height: 33px;
 `;
 
+// 5. 로그인 여부에 따른 네비게이션바 UI변경
+
 export default function Nabar() {
   const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(false);

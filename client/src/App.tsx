@@ -5,7 +5,8 @@ import Footer from "./layout/Footer/Footer.Container";
 import Navbar from "./layout/Navbar/Navbar.Container";
 
 function App() {
-  const AuthLogin = withAuth(Login, false);
+  // 4. 권한분기
+
   return (
     <BrowserRouter>
       <Navbar />

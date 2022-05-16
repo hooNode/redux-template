@@ -28,6 +28,13 @@ export default function LoginPage() {
     e: FormEvent<HTMLFormElement>
   ) => {
     e.preventDefault();
+
+    const body = {
+      email,
+      password,
+    };
+
+    // 2. 로그인 부분 dispatch
   };
 
   const onClickSignUpButton = () => {

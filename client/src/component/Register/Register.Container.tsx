@@ -77,7 +77,7 @@ export default function RegisterPage() {
       isRequiredEmail,
     ];
     if (!isTrue.every((el) => el)) return;
-    // @ts-ignore
+    // 1. 회원가입 부분 dispatch
   };
 
   return (
